@@ -1,10 +1,11 @@
 import input from './input.txt'
+import { notEmptyString } from '../utils'
 
 function parse(file: string) {
     let lines = file.split('\n\n').map((passport) =>
         passport
             .split('\n')
-            .filter((line) => line !== '')
+            .filter(notEmptyString)
             .flatMap((line) => line.split(' ').map((entry) => entry.split(':')))
     )
     return lines

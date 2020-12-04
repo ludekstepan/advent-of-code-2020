@@ -1,10 +1,8 @@
 import input from './input.txt'
+import { notEmptyString } from '../utils'
 
 export function stage1() {
-    let entries = input
-        .split('\n')
-        .filter((line) => line !== '')
-        .map(Number)
+    let entries = input.split('\n').filter(notEmptyString).map(Number)
 
     for (let i = 0; i < entries.length; i++) {
         for (let j = i + 1; j < entries.length; j++) {

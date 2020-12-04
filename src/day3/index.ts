@@ -1,7 +1,8 @@
 import input from './input.txt'
+import { notEmptyString } from '../utils'
 
 function parse(file: string) {
-    let lines = file.split('\n').filter((line) => line !== '')
+    let lines = file.split('\n').filter(notEmptyString)
     return lines
 }
 

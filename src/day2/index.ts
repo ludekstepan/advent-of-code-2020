@@ -1,10 +1,11 @@
 import input from './input.txt'
 import exampleFile from './example.txt'
+import { notEmptyString } from '../utils'
 
 function parse(file: string) {
     let lines = file
         .split('\n')
-        .filter((line) => line !== '')
+        .filter(notEmptyString)
         .map((line) => {
             const [match, min, max, char, password] = line.match(/([0-9]+)-([0-9]+) ([a-z]): ([a-z]+)/) ?? []
 
