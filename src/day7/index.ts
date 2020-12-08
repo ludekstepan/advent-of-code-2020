@@ -152,10 +152,10 @@ export function stage2() {
         let children = nodes.get(name)!
 
         return (
-            0 +
+            1 +
             Array.from(children.values())
                 .map(({ count, name }) => count * getAllChildren(name))
-                .reduce((a, b) => a + b, 1)
+                .reduce((a, b) => a + b, 0)
         )
     }
 

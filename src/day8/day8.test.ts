@@ -1,15 +1,15 @@
 import { example, stage1, stage2 } from './index'
 
-describe('Day 7', () => {
+describe('Day 8', () => {
     test('Example 1', () => {
-        expect(example()).toBe(4)
+        expect(example()).toBe(5)
     })
 
     test('Stage 1', () => {
-        expect(stage1()).toBe(300)
+        expect(stage1()).toBe(2080)
     })
 
     test('Stage 2', () => {
-        expect(stage2()).toBe(8030)
+        expect(stage2()).toBe(2477)
     })
 })
