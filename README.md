@@ -2,8 +2,6 @@
 
 My take on the game. https://adventofcode.com/2020
 
-No code dependencies except for the running platform.
-
 Install:
 
 ```

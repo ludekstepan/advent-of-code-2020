@@ -1,0 +1,7 @@
+export default {
+    timestamp: 1002392,
+
+    buses: '23,x,x,x,x,x,x,x,x,x,x,x,x,41,x,x,x,37,x,x,x,x,x,421,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,17,x,19,x,x,x,x,x,x,x,x,x,29,x,487,x,x,x,x,x,x,x,x,x,x,x,x,13'.split(
+        ','
+    ),
+}
