@@ -1,5 +1,6 @@
 import input from './input.txt'
 import { notEmptyString } from '../utils'
+import { multiply } from '../math'
 
 function parse(file: string) {
     let lines = file.split('\n').filter(notEmptyString)
@@ -39,5 +40,5 @@ export function stage2() {
         [1, 2],
     ]
         .map(([x, y]) => slope(lines, x, y))
-        .reduce((a, b) => a * b)
+        .reduce(multiply, 1)
 }

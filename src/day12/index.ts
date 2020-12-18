@@ -2,6 +2,7 @@ import input from './input.txt'
 import exampleFile1 from './example1.txt'
 
 import { notEmptyString } from '../utils'
+import { manhatanDistance } from '../maps'
 
 type XY = [x: number, y: number]
 
@@ -101,8 +102,6 @@ const waypointReducer = ({ ship, waypoint }: ShipWithWaypoint, [code, value]: Ac
             }
     }
 }
-
-const manhatanDistance = ([x, y]: XY) => Math.abs(x) + Math.abs(y)
 
 function parse(file: string) {
     return file

@@ -3,6 +3,7 @@ import ticketFile from './ticket.txt'
 import nearbyFile from './nearby.txt'
 
 import { notEmptyString } from '../utils'
+import { add, multiply } from '../math'
 
 type Ranges = [[min: number, max: number], [min: number, max: number]]
 
@@ -67,7 +68,7 @@ seat: 13-40 or 45-50
 
             return fieldErrors
         })
-        .reduce((a, b) => a + b, 0)
+        .reduce(add, 0)
 }
 
 export function stage1() {
@@ -87,7 +88,7 @@ export function stage1() {
 
             return fieldErrors
         })
-        .reduce((a, b) => a + b, 0)
+        .reduce(add, 0)
 }
 
 export function example2() {
@@ -193,5 +194,5 @@ export function stage2() {
         })
         .filter(([name]) => name.startsWith('departure'))
         .map(([name, value]) => value)
-        .reduce((a, b) => a * b, 1)
+        .reduce(multiply, 1)
 }

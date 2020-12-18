@@ -2,6 +2,7 @@ import input from './input.txt'
 import exampleInput from './example.txt'
 
 import { notEmptyString } from '../utils'
+import { add } from '../math'
 
 function parse(file: string) {
     return file.split('\n').filter(notEmptyString)
@@ -155,7 +156,7 @@ export function stage2() {
             1 +
             Array.from(children.values())
                 .map(({ count, name }) => count * getAllChildren(name))
-                .reduce((a, b) => a + b, 0)
+                .reduce(add, 0)
         )
     }
 

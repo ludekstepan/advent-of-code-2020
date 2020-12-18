@@ -2,6 +2,7 @@ import input from './input.txt'
 import exampleFile1 from './example1.txt'
 
 import { notEmptyString } from '../utils'
+import { add } from '../math'
 
 enum Place {
     FLOOR = '.',
@@ -101,9 +102,7 @@ function nextVisibleSeat(map: Map, currentPosition: YX) {
 }
 
 function countOccupied(map: Map) {
-    return map
-        .map((line) => line.reduce((prev, curr) => prev + (curr === Place.OCCUPIED ? 1 : 0), 0))
-        .reduce((a, b) => a + b)
+    return map.map((line) => line.reduce((prev, curr) => prev + (curr === Place.OCCUPIED ? 1 : 0), 0)).reduce(add, 0)
 }
 
 export function example1() {

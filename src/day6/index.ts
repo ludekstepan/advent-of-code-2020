@@ -1,6 +1,7 @@
 import input from './input.txt'
 
 import { notEmptyString } from '../utils'
+import { add } from '../math'
 
 function parse(file: string) {
     let groups = file.split('\n\n').filter(notEmptyString)
@@ -18,7 +19,7 @@ export function stage1() {
             }
             return unique.size
         })
-        .reduce((a, b) => a + b)
+        .reduce(add, 0)
 }
 
 export function stage2() {
